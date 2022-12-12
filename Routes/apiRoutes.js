@@ -3,6 +3,7 @@ const app = require('express').Router();
 const fs = require('fs');
 let db = require('../db/db.json');
 
+// API ROUTE: "GET /api/notes" for retrieving all the notes
 app.get('/notes', (req, res) => {
   db = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'))
 
@@ -10,6 +11,7 @@ app.get('/notes', (req, res) => {
 
 });
 
+//API ROUTE: "POST /api/notes" for creating new note
 app.post('/notes', (req, res) => {
   let newNote = { // most basic form of a model
     id: Math.floor(Math.random() * 1000),
@@ -29,7 +31,7 @@ app.post('/notes', (req, res) => {
 
 //API ROUTE: "DELETE /api/notes:id" for deleting a note
 app.delete('/notes/:id', (req, res) => {
-//   let db = require('../db/db.json');
+  let db = require('../db/db.json');
   
   let notesToKeep = [];
 
