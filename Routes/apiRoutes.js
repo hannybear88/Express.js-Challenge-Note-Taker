@@ -1,7 +1,7 @@
+//Bring in required packages
 const app = require('express').Router();
 const fs = require('fs');
 let db = require('../db/db.json');
-
 
 app.get('/notes', (req, res) => {
   db = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'))
@@ -27,8 +27,9 @@ app.post('/notes', (req, res) => {
 
 })
 
+//API ROUTE: "DELETE /api/notes:id" for deleting a note
 app.delete('/notes/:id', (req, res) => {
-  let db = require('../db/db.json');
+//   let db = require('../db/db.json');
   
   let notesToKeep = [];
 
@@ -36,13 +37,14 @@ app.delete('/notes/:id', (req, res) => {
     console.log(req.params.id)
     console.log(db[i].id)
 
-    if (parseInt(db[i].id) !== parseInt(req.params.id)) {
+    if (parseInt(db[i].id) != parseInt(req.params.id)) {
       notesToKeep.push(db[i]);
     }
   }
 
   console.log(notesToKeep);
 
+  //writeToFile(dbFile, notes);
   db = notesToKeep;
   fs.writeFileSync('./db/db.json', JSON.stringify(db), (err, res) => {
     if(err) throw err;
