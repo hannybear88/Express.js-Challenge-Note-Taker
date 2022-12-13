@@ -2,11 +2,16 @@
 HW Challenge #11
 
 ## Description
+For this challenge we had to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
+The application’s front end has already been created and provided by UCSD Coding Bootcamp. It's our job to build the back end, connect the two, and then deploy the entire application to Heroku.
+
+It was challenging to build the back-end and connect it to the front-end. Even though it was challenging, it was quite enjoyable. I like making notes to myself because it helps me with reminding myself what I have coming up, what I need to do for the day, week, any events that are coming up, and etc. Another challenge I ran into was figuring out how to deploy it onto Heroku. It had failed which was frustrating because it was working fine everywhere else. I finally was able to figure it out.
+
+ I had successfully deployed the app on Heroku, the app has no errors in the console, and there are no errors in the app itself. 
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage) 
 * [User Story](#userstory)
 * [How to Use This Project and Acceptance Criteria](#HowtoUseThisProjectandAcceptanceCriteria)
 * [Demo](#Demo)
@@ -16,10 +21,9 @@ HW Challenge #11
 
 
 ## Installation 
-No installation is needed at this time
-
-## Usage
-IF you would like to use this application, open the command-line, make sure you are in the directory you want to be in, then once you are in that directory run the command "node server.js".
+<!-- `````
+npm install
+````` -->
 
 ## User Story
 - AS A small business owner
@@ -27,8 +31,9 @@ IF you would like to use this application, open the command-line, make sure you 
 - SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## How to Use This Project and Acceptance Criteria
+Click on the button below to be directed straight to the Heroku deployed application
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://expressjs-challenge-note-taker.herokuapp.com/)
 
-<!--link to heroku application-->
 
 - GIVEN a note-taking application
 - WHEN I open the Note Taker
@@ -49,16 +54,23 @@ IF you would like to use this application, open the command-line, make sure you 
 Screenshots
 
 Landing Page Screenshot
+![Landing Page Screenshot](/public/assets/images/landing_page_screenshot.png)
 
-Taking Notes Screenshot
+Note Taker Screenshots
+
+![Note Taker Screenshot 1](/public/assets/images/Note_Taker_Screenshot_1.png)
+
+![Note Taker Screenshot 2](/public/assets/images/Note_Taker_Screenshot_2.png)
+
+![Note Taker Screenshot 3](/public/assets/images/Note_Taker_Screenshot_3.png)
 
 ## Support 
 If you need support or have any questions about the repo, please [open an issue](https://github.com/hannybear88/Node.js-Challenge-Professional-README-Generator/issues) or contact me via email at hannahkchung88@gmail.com. You can find more of my work on my GitHub, [hannybear88](https://github.com/hannybear88/).
 
 ## Credits
-UCSD Coding Bootcamp
-Hannah Chung refactored the code
+- UCSD Coding Bootcamp provided starter code
+- Hannah Chung refactored the code
 
 ## Contributors
-UCSD Coding Bootcamp provided starter code
-Hannah Chung refactored the code
+- UCSD Coding Bootcamp provided starter code
+- Hannah Chung refactored the code
