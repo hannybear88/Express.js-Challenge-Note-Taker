@@ -12,18 +12,45 @@ It was challenging to build the back-end and connect it to the front-end. Even t
 
 ## Table of Contents
 * [Installation](#installation)
+* [Getting Started and Bonus](#GettingStartedandBonus)
 * [User Story](#userstory)
 * [How to Use This Project and Acceptance Criteria](#HowtoUseThisProjectandAcceptanceCriteria)
 * [Demo](#Demo)
+* [Technologies Used](#TechnologiesUsed)
 * [Support](#Support)
 * [Credits](#Credits)
 * [Contributors](#Contributors)
 
 
-## Installation 
-<!-- `````
+## Installation
+`````
 npm install
-````` -->
+`````
+
+## Getting Started and Bonus
+
+**Getting Started**
+
+The application should have a 
+`db.json` file on the back end that will be used to store and retrieve notes using the `fs` module.
+
+- The following HTML routes should be created:
+
+    * `GET /notes` should return the `notes.html` file.
+
+    * `GET *` should return the `index.html` file.
+
+- The following API routes should be created:
+
+    * `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
+
+    * `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into `npm` packages that could do this for you).
+
+**Bonus**
+
+You haven’t learned how to handle DELETE requests, but this application has that functionality in the front end. As a bonus, see if you can add the DELETE route to the application using the following guideline:
+
+`DELETE /api/notes/:id` should receive a query parameter containing the id of a note to delete. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
 ## User Story
 - AS A small business owner
@@ -32,6 +59,7 @@ npm install
 
 ## How to Use This Project and Acceptance Criteria
 Click on the button below to be directed straight to the Heroku deployed application
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://expressjs-challenge-note-taker.herokuapp.com/)
 
 
@@ -53,16 +81,28 @@ Click on the button below to be directed straight to the Heroku deployed applica
 ## Demo 
 Screenshots
 
-Landing Page Screenshot
+**Landing Page Screenshot**
 ![Landing Page Screenshot](/public/assets/images/landing_page_screenshot.png)
 
-Note Taker Screenshots
+**Note Taker Screenshots**
 
 ![Note Taker Screenshot 1](/public/assets/images/Note_Taker_Screenshot_1.png)
 
 ![Note Taker Screenshot 2](/public/assets/images/Note_Taker_Screenshot_2.png)
 
 ![Note Taker Screenshot 3](/public/assets/images/Note_Taker_Screenshot_3.png)
+
+## Technologies Used
+
+![Technologies](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Technologies](https://img.shields.io/badge/-OOP-red)
+![Technologies](https://img.shields.io/badge/-JSON-blue)
+![Technologies](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
+![Technologies](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Express-blueviolet)
+![Technologies](https://img.shields.io/badge/UUID-orange)
+![Technologies](https://img.shields.io/badge/-Heroku-grey)
+
 
 ## Support 
 If you need support or have any questions about the repo, please [open an issue](https://github.com/hannybear88/Node.js-Challenge-Professional-README-Generator/issues) or contact me via email at hannahkchung88@gmail.com. You can find more of my work on my GitHub, [hannybear88](https://github.com/hannybear88/).
