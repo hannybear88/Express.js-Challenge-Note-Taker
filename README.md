@@ -12,11 +12,11 @@ It was challenging to build the back-end and connect it to the front-end. Even t
 
 ## Table of Contents
 * [Installation](#installation)
-* [Getting Started and Bonus](#GettingStartedandBonus)
-* [User Story](#userstory)
-* [How to Use This Project and Acceptance Criteria](#HowtoUseThisProjectandAcceptanceCriteria)
+* [GettingStartedandBonus](#GettingStartedandBonus)
+* [UserStory](#userstory)
+* [HowtoUseThisProjectandAcceptanceCriteria](#HowtoUseThisProjectandAcceptanceCriteria)
 * [Demo](#Demo)
-* [Technologies Used](#TechnologiesUsed)
+* [TechnologiesUsed](#TechnologiesUsed)
 * [Support](#Support)
 * [Credits](#Credits)
 * [Contributors](#Contributors)
