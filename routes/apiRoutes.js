@@ -31,28 +31,34 @@ app.post('/notes', (req, res) => {
 
 //API ROUTE: "DELETE /api/notes:id" for deleting a note
 app.delete('/notes/:id', (req, res) => {
-  let db = require('../db/db.json');
+  // let db = require('../db/db.json');
   
-  let notesToKeep = [];
+  // let notesToKeep = [];
 
-  for(let i = 0; i < db.length; i++) {
-    console.log(req.params.id)
-    console.log(db[i].id)
+  // for(let i = 0; i < db.length; i++) {
+  //   console.log(req.params.id)
+  //   console.log(db[i].id)
 
-    if (parseInt(db[i].id) != parseInt(req.params.id)) {
-      notesToKeep.push(db[i]);
-    }
-  }
+  //   if (parseInt(db[i].id) != parseInt(req.params.id)) {
+  //     notesToKeep.push(db[i]);
+  //   }
+  // }
 
-  console.log(notesToKeep);
+  // console.log(notesToKeep);
 
-  //writeToFile(dbFile, notes);
-  db = notesToKeep;
-  fs.writeFileSync('./db/db.json', JSON.stringify(db), (err, res) => {
-    if(err) throw err;
-  });
+  // //writeToFile(dbFile, notes);
+  // db = notesToKeep;
+  const id = req.params.id
+  fs.readFile('./db/db.json', (err, data) => {
+    const parsedArr = JSON.parse(data)
+    const filteredNotes = parsedArr.filter(notes => notes.id != id )
 
-  res.json(db);
+    fs.writeFile('./db/db.json', JSON.stringify(filteredNotes), (err) => {
+      if(err) throw err;
+      res.send(db);
+    });
+  })
+
 
 });
 
